@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+  background: color #f8f8f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Imagen */
+.logo img {
+  height: 40px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: white;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  padding: 0 20px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; /* importante */
+  z-index: 1000;
+}
+
+header .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+  margin: 0;
+  justify-content: flex-end;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  position: relative;
+}
+
+nav ul li {
+  position: relative; /* necesario para el dropdown */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 200;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #eae4e4;
+  color: #000;
+}
+
+/* Dropdown (submenú) */
+nav ul li .dropdown {
+  display: none; /* oculto por defecto */
+  position: absolute;
+  top: 100%; /* justo debajo del link padre */
+  left: 0;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px 0;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  flex-direction: column;
+}
+
+nav ul li .dropdown li {
+  padding: 0;
+}
+
+nav ul li .dropdown li a {
+  padding: 8px 20px;
+}
+
+/* Mostrar dropdown al pasar el mouse */
+nav ul li.submenu:hover .dropdown {
+  display: flex;
+}
+
+/* Responsive: menú vertical */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  nav ul li .dropdown {
+    position: static;
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul li.submenu:hover .dropdown {
+    display: flex;
+  }
+}
+
+.carousel-item img {
+  filter: brightness(60%);
+}
+
+#inicio img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.img-arriba {
+  object-position: top;
+  object-position: 50% 30%;
+}
+
+#sobre-mi {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+#sobre-mi .contenedor {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 40px;
+}
+
+#sobre-mi .texto {
+  flex: 1;
+}
+
+#sobre-mi .texto h2 {
+  margin-bottom: 15px;
+}
+#sobre-mi .texto p {
+  color: #555;
+  margin-bottom: 20px;
+}
+#sobre-mi .texto button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#sobre-mi .imagen {
+  flex: 1;
+}
+
+#sobre-mi img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#portfolio {
+  padding: 80px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+#portfolio h2 {
+  margin-bottom: 10px;
+}
+
+#portfolio p {
+  color: #666;
+  margin-bottom: 30px;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 10px;
+}
+.foto img {
+  transition: 0.3s;
+}
+
+.foto img:hover {
+  transform: scale(1.6);
+}
+
+.sesiones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 50px;
+  background-color: #bfb9b9;
+}
+
+.card {
+  border-radius: 15px; /* bordes suaves */
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 220px; /* altura uniforme */
+  object-fit: cover;
+  transition: transform 0.3s;
+  display: block;
+}
+
+.card p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+  background-color: rgba(234, 228, 228, 0.8);
+  font-size: 14px;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+#sesiones {
+  scroll-margin-top: 100px; /* ajustá según la altura de tu header */
+}
+
+@media (max-width: 1200px) {
+  .sesiones {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sesiones {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card img {
+  transition: transform 0.3s;
+}
+
+#contacto {
+  min-height: calc(100vh - 80px);
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-contacto {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Texto */
+.info {
+  flex: 1;
+}
+
+.info h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.info p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Formulario */
+.formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.formulario textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.formulario button {
+  padding: 12px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer {
+  background: #fefdfd;
+  color: rgb(7, 7, 7);
+  padding: 20px 0;
+}
+
+.footer-contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-redes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* iconos */
+.footer-redes img {
+  width: 32px;
+  transition: transform 0.3s;
+}
+
+.footer-redes img:hover {
+  transform: scale(1.2);
+}
+
+/* flecha */
+.flecha {
+  text-decoration: none;
+  color: rgb(10, 9, 9);
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
