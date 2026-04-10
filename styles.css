@@ -5,15 +5,16 @@
 }
 
 body {
-  font-family: arial, sans-serif;
-  background: color #f8f8f8;
+  font-family: "poppins", sans-serif;
+  background: #f8f8f8;
   color: #222;
   line-height: 1.6;
+  padding-top: 100px;
 }
 
 h1 {
   font-family: "Great Vibes", cursive;
-  font-weight: 400px;
+  font-weight: 400;
   font-style: normal;
   font-size: 48px;
 }
@@ -65,7 +66,7 @@ nav ul {
   padding: 0 20px;
   margin: 0;
   justify-content: flex-end;
-  background-color: #f5f5f5;
+  background-color: transparent;
   border-radius: 10px;
   position: relative;
 }
@@ -220,7 +221,7 @@ nav ul li.submenu:hover .dropdown {
 }
 
 .foto img:hover {
-  transform: scale(1.6);
+  transform: scale(1.05);
 }
 
 .sesiones {
