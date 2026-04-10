@@ -2,253 +2,33 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jacqueline fotografia</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
+    <title>En construcción</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+      h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        color: #ccc;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="contenedor">
-        <div class="logo">
-          <h1>jacqueline fotografia</h1>
-          <img src="imagen/imagen-icono1.png" alt="" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="web.html">Inicio</a></li>
-
-            <!-- Sesiones con submenú -->
-            <li class="submenu">
-              <a href="#sesiones">Sesiones</a>
-              <ul class="dropdown">
-                <li><a href="embarazos.html">Embarazo</a></li>
-                <li><a href="newborn.html">Newborn</a></li>
-                <li><a href="primer_año.html">Primer año</a></li>
-                <li><a href="niños.html">Niños</a></li>
-                <li><a href="familia.html">Familia</a></li>
-                <li><a href="aire_libre.html">Aire libre</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="foto_producto.html">Foto producto</a></li>
-              </ul>
-            </li>
-
-            <li><a href="estudio.html">Estudio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section id="inicio">
-      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="imagen/carrousel1.jpg"
-              class="d-block w-100 img-centro"
-              alt=""
-            />
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src="imagen/carrousel3.jpg"
-              class="d-block w-100 img-centro"
-              alt=""
-            />
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src="imagen/carrousel2.jpg"
-              class="d-block w-100 img-centro"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <!-- Botón anterior -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-
-        <!-- Botón siguiente -->
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </section>
-    <section id="sobre-mi">
-      <div class="contenedor">
-        <div class="texto">
-          <h2>Sobre mi</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia mollit anim id est laborum.Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-        </div>
-        <div class="imagen">
-          <img src="imagen/SOBRE-MI.jpg" alt="fotos trabajando" />
-        </div>
-      </div>
-    </section>
-    <section id="portfolio">
-      <h2>Galeria</h2>
-      <p>explora algunos de mis trabajos recientes</p>
-
-      <div class="galeria">
-        <div class="foto">
-          <img src="imagen/foto1.jpg" alt="" />
-        </div>
-        <div class="foto">
-          <img src="imagen/foto2.JPG" alt="" />
-        </div>
-        <div class="foto">
-          <img src="imagen/foto3.jpg" alt="" />
-        </div>
-        <div class="foto">
-          <img src="imagen/foto4.jpg" alt="" />
-        </div>
-        <div class="foto">
-          <img src="imagen/foto5.jpg" alt="" />
-        </div>
-        <div class="foto">
-          <img src="imagen/foto6.jpg" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <section id="sesiones" class="sesiones">
-      <div class="card">
-        <img src="imagen/foto1.jpg" alt="Embarazo" />
-        <p>Embarazo</p>
-      </div>
-
-      <div class="card">
-        <img src="imagen/foto2.JPG" alt="Newborn" />
-        <p>Newborn</p>
-      </div>
-
-      <div class="card">
-        <img src="imagen/foto3.jpg" alt="Bebés" />
-        <p>Bebés</p>
-      </div>
-
-      <div class="card">
-        <img src="imagen/foto4.jpg" alt="Primer año" />
-        <p>Primer año</p>
-      </div>
-
-      <div class="card">
-        <img src="imagen/foto5.jpg" alt="Niños" />
-        <p>Niños</p>
-      </div>
-
-      <div class="card">
-        <img src="imagen/foto6.jpg" alt="Familia" />
-        <p>Familia</p>
-      </div>
-
-      <div class="card">
-        <img src="imagen/foto1.jpg" alt="In the Box" />
-        <p>In the Box</p>
-      </div>
-
-      <div class="card">
-        <img src="imagen/foto3.jpg" alt="Egresados" />
-        <p>Egresados</p>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <div class="contenedor-contacto">
-        <div class="info">
-          <h2>Reservá tu sesión</h2>
-          <p>
-            Contame qué tipo de sesión querés y coordinamos fecha. Estoy para
-            ayudarte a capturar momentos únicos 📸
-          </p>
-
-          <a
-            href="https://wa.me/5491164175898"
-            target="_blank"
-            class="btn-whatsapp"
-          >
-            Escribime por WhatsApp
-          </a>
-        </div>
-
-        <form class="formulario" action="enviar.php" method="post">
-          <input type="text" name="nombre" placeholder="Nombre" required />
-          <input type="email" name="email" placeholder="Email" required />
-
-          <select name="tipo_sesion" required>
-            <option value="" disabled selected>Tipo de sesión</option>
-            <option value="retrato">Embarazo</option>
-            <option value="pareja">Newborn</option>
-            <option value="evento">Primer año</option>
-            <option value="evento">Niños</option>
-            <option value="evento">Familia</option>
-            <option value="evento">Aire libre</option>
-            <option value="evento">Eventos</option>
-            <option value="evento">Foto producto</option>
-          </select>
-
-          <input type="date" name="fecha" required />
-
-          <textarea name="mensaje" placeholder="Mensaje"></textarea>
-
-          <button type="submit">Enviar consulta</button>
-        </form>
-      </div>
-    </section>
-    <footer>
-      <div class="footer-contenedor">
-        <p>© 2026 Jacqueline Fotografía - Todos los derechos reservados</p>
-
-        <div class="footer-redes">
-          <a
-            href="https://www.instagram.com/jacquelinefotografia__?igsh=MXBoZTdqbDhjc3djcw=="
-            ><img src="imagen/imagen-icono.png" alt="Instagram"
-          /></a>
-          <a href="#inicio" class="flecha">↑</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div>
+      <h1>Próximamente</h1>
+      <p>Estamos trabajando en nuestra web de fotografía 📸</p>
+    </div>
   </body>
 </html>
