@@ -1,0 +1,32 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+
+.formulario input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+#galeria {
+  display: flex;
+  flex-wrap: wrap;
+}

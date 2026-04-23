@@ -395,3 +395,43 @@ footer {
   padding: 5px 10px;
   border-radius: 50%;
 }
+
+.galeria-estudio {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galeria-estudio img {
+  width: 100%;
+  max-width: 33%;
+  border-radius: 10px;
+}
+
+.beneficios {
+  list-style: none; /* saca los puntitos */
+  padding: 0;
+  text-align: center; /* centra el texto */
+}
+
+.beneficios li {
+  margin-bottom: 10px;
+}
+
+/* stylo de selecion.html */
+
+.foto {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.foto {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3 ease;
+}
+
+.foto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
