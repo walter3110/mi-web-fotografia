@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap");
+
+:root {
+    color-scheme: light;
+    font-family: "DM Sans", sans-serif;
+    color: #39342f;
+    background: #f5f2ee;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    --ink: #39342f;
+    --muted: #8d837a;
+    --accent: #a87360;
+    --line: #e8e1da;
+    --paper: #fffefa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(ellipse at 50% 45%, rgba(255, 254, 250, 0.88), transparent 58%),
+        #f5f2ee;
+}
+
+a {
+    color: inherit;
+}
+
+.site-header,
+.site-footer {
+    width: min(100% - 64px, 1180px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header {
+    min-height: 88px;
+    border-bottom: 1px solid rgba(57, 52, 47, 0.09);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-mark,
+.card-flourish {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+}
+
+.brand-mark {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #c7a99a;
+    border-radius: 50%;
+    color: var(--accent);
+    font-size: 19px;
+}
+
+.brand-name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 0.015em;
+}
+
+.brand-name span {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.header-note,
+.site-footer {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+}
+
+main {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 48px 24px;
+}
+
+.login-shell {
+    width: min(100%, 470px);
+    text-align: center;
+}
+
+.login-card,
+.gallery-shell {
+    padding: 48px 54px 42px;
+    border: 1px solid rgba(232, 225, 218, 0.9);
+    background: rgba(255, 254, 250, 0.88);
+    box-shadow: 0 24px 70px rgba(80, 63, 48, 0.07);
+}
+
+.card-flourish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    color: var(--accent);
+    font-size: 26px;
+}
+
+.card-flourish span {
+    width: 25px;
+    height: 1px;
+    background: #d7bfb2;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(29px, 6vw, 37px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.intro {
+    max-width: 310px;
+    margin: 16px auto 29px;
+    color: #81776e;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.access-form {
+    text-align: left;
+}
+
+.access-form label {
+    display: block;
+    margin-bottom: 9px;
+    color: #615950;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.access-form input {
+    width: 100%;
+    min-height: 49px;
+    padding: 0 14px;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    outline: none;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 13px;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.access-form input:focus {
+    border-color: #b68b79;
+    box-shadow: 0 0 0 3px rgba(168, 115, 96, 0.12);
+}
+
+.access-form input::placeholder {
+    color: #b4aaa1;
+}
+
+.access-form button {
+    width: 100%;
+    min-height: 49px;
+    margin-top: 13px;
+    border: 0;
+    background: var(--ink);
+    color: #fffefa;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    transition: background 160ms ease;
+}
+
+.access-form button:hover {
+    background: #594c43;
+}
+
+.access-form button span {
+    margin-left: 8px;
+    color: #d5b29f;
+}
+
+.help-note {
+    margin: 22px 0 0;
+    color: #9c928a;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.privacy-note {
+    margin: 23px 0 0;
+    color: #998e85;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
+.privacy-note span {
+    margin-right: 5px;
+    color: var(--accent);
+}
+
+.error-message,
+.notice-message {
+    margin: 0 0 18px;
+    padding: 11px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.error-message {
+    border: 1px solid #edd8d2;
+    background: #fbf1ee;
+    color: #8e493b;
+}
+
+.notice-message {
+    border: 1px solid #d6e5d7;
+    background: #f1f7f1;
+    color: #496d4a;
+}
+
+.gallery-shell {
+    width: min(100%, 1100px);
+    text-align: center;
+}
+
+.gallery-date {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.gallery-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 30px 0 18px;
+    text-align: left;
+}
+
+.gallery-toolbar p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.photo-download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 11px;
+    letter-spacing: 0.035em;
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease;
+}
+
+.photo-download-button:hover {
+    border-color: #594c43;
+    background: #594c43;
+}
+
+.photo-download-button span {
+    color: #d5b29f;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.photo-card {
+    min-width: 0;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    text-align: left;
+}
+
+.photo-preview {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #eee8e2;
+}
+
+.photo-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 280ms ease;
+}
+
+.photo-card:hover .photo-preview img {
+    transform: scale(1.025);
+}
+
+.photo-card-info {
+    padding: 13px;
+}
+
+.photo-name {
+    overflow: hidden;
+    margin: 0 0 11px;
+    color: #665c54;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.photo-download-button {
+    width: 100%;
+    min-height: 38px;
+    font-size: 10px;
+}
+
+.photo-download-button span {
+    margin-left: 2px;
+}
+
+.empty-state {
+    margin-top: 26px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.logout-form {
+    margin-top: 25px;
+}
+
+.text-button {
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 11px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.site-footer {
+    min-height: 65px;
+    border-top: 1px solid rgba(57, 52, 47, 0.09);
+    font-size: 9px;
+}
+
+@media (max-width: 560px) {
+    .site-header,
+    .site-footer {
+        width: calc(100% - 36px);
+    }
+
+    .site-header {
+        min-height: 70px;
+    }
+
+    .brand-mark {
+        width: 31px;
+        height: 31px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    .header-note {
+        max-width: 108px;
+        font-size: 9px;
+        text-align: right;
+    }
+
+    main {
+        padding: 34px 18px;
+    }
+
+    .login-card,
+    .gallery-shell {
+        padding: 37px 24px 32px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .photo-card-info {
+        padding: 10px;
+    }
+
+    .photo-download-button {
+        min-height: 36px;
+        padding-inline: 8px;
+        font-size: 9px;
+    }
+
+    .site-footer {
+        font-size: 8px;
+        letter-spacing: 0.03em;
+    }
+}
+
+@media (max-width: 360px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

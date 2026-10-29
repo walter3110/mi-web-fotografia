@@ -1,0 +1,18 @@
+<?php
+
+return [
+    'db' => [
+        'host' => '127.0.0.1',
+        'port' => 3306,
+        'name' => 'nombre_base_local',
+        'user' => 'usuario_local',
+        'password' => '',
+        'charset' => 'utf8mb4',
+    ],
+    'app_key' => '',
+    'admin' => [
+        'username' => '',
+        'password_hash' => '',
+    ],
+    'storage_path' => __DIR__ . '/storage/originals',
+];
